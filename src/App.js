@@ -18,18 +18,19 @@ const GlobalStyle = createGlobalStyle`
   body{
     display:flex;
     justify-content:center;
-    background-color: #1C1C1C;}
+    background-color: #696969;}
   
   `
 
   const Inicio = styled.div`
+  background-color: #D3D3D3;
   height: 8vh;
-  width: 95vw;
+  width: 100vw;
   list-style: none;
   display:flex;
   justify-content: space-between;
   aling-items: center;  
-  margin-top: 1vh;
+  margin-top: 0vh;
   color: #ffff;
   @media(max-width: 630px){
     
@@ -41,16 +42,22 @@ const Menu = styled.ul`
   display:flex;
   justify-content: space-evenly;
   font-family: "Lucida Console", "Courier New", monospace;
-  color: blue;
+  
 
 `
 const Titulo = styled.h1`
-font-family: "Lucida Console", "Courier New", monospace;
 width: 10vw;
-margin-top: 2vh;
+margin-top: 1vh;
+margin-left: 2vw;
+color: black;
 `
 
+const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: black;
+  font-size: 23px;  
 
+`;
 
 
 
@@ -64,10 +71,10 @@ export default function App() {
       <GlobalStyle/>
        
         <Inicio>
-          <Titulo>Meu Blog</Titulo>
+          <Titulo>Jefferson</Titulo>
           <Menu>
-            <Link to="/">Home</Link>
-            <Link to="/projetos">Projetos</Link> 
+            <StyledLink to="/">Home</StyledLink>
+            <StyledLink to="/projetos">Projetos</StyledLink> 
           </Menu>
         </Inicio>
       
